@@ -7,7 +7,6 @@ public class Exercise64
         int b = Integer.parseInt(args[1]);
         int c = Integer.parseInt(args[2]);
 
-        int swap;
         if(a > b)
         {
             b = a-b;
