@@ -10,21 +10,21 @@ public class Exercise64
         int swap;
         if(a > b)
         {
-            swap = a;
-            a = b;
-            b = swap;
+            b = a-b;
+            a = a-b;
+            b = a+b;
         }
         if(a > c)
         {
-            swap = a;
-            a = c;
-            c = swap;
+            c = a-c;
+            a = a-c;
+            c = a+c;
         }
         if(b > c)
         {
-            swap = b;
-            b = c;
-            c = swap;
+            c = b-c;
+            b = b-c;
+            c = b+c;
         }
 
         System.out.println("a: " + a + ", b: " + b + ", c: " + c);
