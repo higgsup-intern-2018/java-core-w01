@@ -8,7 +8,10 @@ public class Exercise8
 
         for(int i = 1; i <= numberLines; i++)
         {
-            if(i % 10 == 1 && i != 11)
+            if(i % 100 >= 11 && i % 100 <= 20)
+            {
+                suffix = "th";
+            } else if(i % 10 == 1 && i != 11)
             {
                 suffix = "st";
             }else if(i % 10 == 2 && i != 12)
