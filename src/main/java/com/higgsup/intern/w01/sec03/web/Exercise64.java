@@ -11,7 +11,6 @@ public class Exercise64 {
         if (b > c) { int t = c; c = b; b = t; }
         if (a > c) { int t = c; c = a; a = t; }
 
-        // print out results
         System.out.println(a + " " + b + " " + c);
     }
 }
