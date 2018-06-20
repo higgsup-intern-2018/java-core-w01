@@ -1,5 +1,11 @@
 package com.higgsup.intern.w01.exercises.oop;
 
+/**
+ * Exercise 01: GradeBook.java
+ *
+ * GradeBook class with a constructor to
+ * initialize the course name.
+ */
 public class GradeBook {
     private String courseName; // course name for this GradeBook
 
@@ -22,8 +28,7 @@ public class GradeBook {
     public void displayMessage() {
         // this statement calls getCourseName to get the
         // name of the course this GradeBook represents
-        System.out.printf("Welcome to the grade book for\n%s!\n",
-                getCourseName());
+        System.out.printf("Welcome to the grade book for\n%s!\n", getCourseName());
     } // end method displayMessage
 
 } // end class GradeBook
