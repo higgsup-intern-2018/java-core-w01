@@ -9,6 +9,7 @@ public class Exercise55 {
             case 3:
                 if(day>20){
                     System.out.println("Season: Spring");
+
                 }else{
                     System.out.println("Season: Winter");
                 }
