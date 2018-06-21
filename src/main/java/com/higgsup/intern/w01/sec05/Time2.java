@@ -73,6 +73,8 @@ public class Time2
         return second;
     } // end method getSecond
 
+    //
+
     //tick method: increment time stored by one second
     public void tick()
     {
@@ -115,10 +117,7 @@ public class Time2
 
     //Program test three method
     public static void main(String[] args) {
-        Time2 time = new Time2(23, 58, 23);
-        for(int i = 0; i < 98; i++){
-            time.tick();
-            System.out.println(time);
-        }
+        Time2 time = new Time2(44, 46, 82);
+        System.out.println(time);
     }
 }
