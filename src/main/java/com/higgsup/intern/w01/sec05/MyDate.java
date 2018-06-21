@@ -67,9 +67,10 @@ public class MyDate
             month++;
         }
 
-        if(checkMonth(month) == 1)
+        if(month == 13)
         {
             month = checkMonth(month);
+            year++;
         }
     }
 
