@@ -13,7 +13,7 @@ public class MyDate
         year = checkYear(theYear); //  validate year
         day = checkDay(theDay); // validate day
 
-        System.out.printf("MyDate object constructor for date %s\n", this);
+        //System.out.printf("MyDate object constructor for date %s\n", this);
     } // end MyDate constructor
 
     //method to confirm year value
@@ -66,7 +66,6 @@ public class MyDate
             day = checkDay(day);
             month++;
         }
-
         if(month == 13)
         {
             month = checkMonth(month);
