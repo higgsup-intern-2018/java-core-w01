@@ -6,7 +6,7 @@ public class SavingsAccountTest {
         SavingsAccount saver2 = new SavingsAccount();
         saver1.setSavingsBalance(2000);
         saver2.setSavingsBalance(3000);
-        System.out.printf("The monthly interest of saver1: $%1.2f \n",saver1.calculateMonthlyInterest());
+        System.out.printf("The monthly interest of saver1: $%1.2f \n", saver1.calculateMonthlyInterest());
         System.out.printf("The monthly interest of saver2: $%1.2f \n", saver2.calculateMonthlyInterest());
         System.out.println();
         System.out.printf("New balances for saver1: $%1.2f \n", saver1.getSavingsBalance());
@@ -14,7 +14,7 @@ public class SavingsAccountTest {
 
         System.out.println("============================================");
         SavingsAccount.modifyInterestRest(0.05);
-        System.out.printf("The next month interest of saver1: $%1.2f \n",saver1.calculateMonthlyInterest());
+        System.out.printf("The next month interest of saver1: $%1.2f \n", saver1.calculateMonthlyInterest());
         System.out.printf("The next month interest of saver2: $%1.2f \n", saver2.calculateMonthlyInterest());
         System.out.println();
         System.out.printf("New balances for saver1: $%1.2f \n", saver1.getSavingsBalance());
