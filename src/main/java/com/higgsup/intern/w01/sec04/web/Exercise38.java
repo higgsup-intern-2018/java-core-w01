@@ -1,18 +1,29 @@
 package com.higgsup.intern.w01.sec04.web;
+
+import java.util.Arrays;
+
 /*Write a program Yahtzee.java that simulates the rolling of five dice and prints "Yahtzee"
         if all five dice are the same; otherwise it should print "Try again."*/
 public class Exercise38 {
     public static void main(String[] args) {
+        int numberOfDices = 5;
+        int [] myArray = new int[numberOfDices];
 
-        int random1 = (int) (Math.random() * 6) + 1;
-        int random2 = (int) (Math.random() * 6) + 1;
-        int random3 = (int) (Math.random() * 6) + 1;
-        int random4 = (int) (Math.random() * 6) + 1;
-        int random5 = (int) (Math.random() * 6) + 1;
+        for (int i = 0; i < numberOfDices; i++) {
+            myArray[i] = (int) (Math.random()*6) +1;
 
-        if ((random1==random2)&&(random1==random3)&&(random1==random4)&&(random1==random5)){
+        }
+        System.out.println("The values of dices: " + Arrays.toString(myArray));
+        //Compare the values of the arrays
+        int count = 0;
+        for (int i = 0; i < numberOfDices - 1; i++){
+                if (myArray[0]== myArray[i]){
+                    count++;
+            }
+        }
+        if ( count == numberOfDices ){
             System.out.println("Yahtzee");
-        }else System.out.println("Try again");
-
+        } else
+            System.out.println("Try again");
     }
 }
