@@ -1,13 +1,13 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise4Test
+public class EmployeeTest
 {
     public static void main(String[] args) {
         //Employee with positive salary
-        Exercise4 firstEmployee = new Exercise4("Ted", "Mosby", 1800);
+        Employee firstEmployee = new Employee("Ted", "Mosby", 1800);
         System.out.println("First employee yearly salary: " + firstEmployee.getMonthlySalary() * 12);
         //Employee with negative salary
-        Exercise4 secondEmployee = new Exercise4("Lily", "Aldrin", -200);
+        Employee secondEmployee = new Employee("Lily", "Aldrin", -200);
         System.out.println("Second employee yearly salary: " + secondEmployee.getMonthlySalary() * 12);
 
         //set negative salary
