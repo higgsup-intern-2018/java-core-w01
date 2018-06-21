@@ -9,8 +9,10 @@ public class Exercise05 {
             Scanner input = new Scanner (new File("E:\\Higgsup\\java-core-w01\\src\\main\\java\\com\\higgsup\\intern\\w01\\sec05\\part01\\test.txt"));
             while (input.hasNext()){
                 String line = input.nextLine();
-                System.out.println(line);
-            }
+                for (String word : line.split(" ")){
+                    System.out.println(word);
+                }
+                }
         } catch (java.io.FileNotFoundException e) {}
     }
 }
