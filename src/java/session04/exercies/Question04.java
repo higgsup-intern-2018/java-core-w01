@@ -15,6 +15,7 @@ public class Question04 {
              temp = a[n-i-1];
             a[n-i-1] = a[i];
             a[i] = temp;
+
         }
             System.out.println(Arrays.toString(a));
     }

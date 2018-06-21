@@ -14,6 +14,7 @@ public class Question38 {
         for (int i = 0; i < 5; i++) {
             dice[i] = rd.nextInt(6) + 1;
         }
+
         //hiển thị kết quả
         for (int i = 0; i < 5; i++) {
             System.out.print("\nRoll " + (i+1) + " : " );

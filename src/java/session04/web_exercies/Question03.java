@@ -33,6 +33,7 @@ public class Question03 {
             a[x] = a[i];
             a[i] = y;
         }
+
         //in ra hoán vị ở trên
         for (int i = 0; i < n; i++)
         {
