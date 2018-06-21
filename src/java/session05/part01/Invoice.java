@@ -1,24 +1,24 @@
 package session05.part01;
 
 public class Invoice {
-    private String productId;
+    private String Id;
     private String description;
     private int quantity;
     private double price;
     public Invoice(String Id , String description,int quantity,double price)
     {
-        this.productId=Id;
+        this.Id=Id;
         this.description=description;
         this.quantity =quantity;
         this.price=price;
     }
 
     public void setProductId(String productId) {
-        this.productId = productId;
+        this.Id = productId;
     }
 
     public String getProductId() {
-        return productId;
+        return Id;
     }
     public void setDescription(String description) {
         this.description = description;
