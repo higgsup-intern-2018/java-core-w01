@@ -1,14 +1,14 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise3Test
+public class InvoiceTest
 {
     public static void main(String[] args)
     {
         //create invoice with positive quantity and price
-        Exercise3 invoice = new Exercise3("2KHCB", "At store", 3, 13.25);
+        Invoice invoice = new Invoice("2KHCB", "At store", 3, 13.25);
 
         //create invoice with negative quantity and price
-        Exercise3 anotherInvoice = new Exercise3("EPFKH", "At mall", -2, -8.85);
+        Invoice anotherInvoice = new Invoice("EPFKH", "At mall", -2, -8.85);
 
         //Invoices information
         System.out.println(invoice + "\n");

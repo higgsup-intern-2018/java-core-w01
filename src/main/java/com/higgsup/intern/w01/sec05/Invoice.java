@@ -1,13 +1,13 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise3
+public class Invoice
 {
     private String number;
     private String description;
     private int quantity;
     private double price;
 
-    public Exercise3(String number, String description, int quantity, double price)
+    public Invoice(String number, String description, int quantity, double price)
     {
         this.number = number;
         this.description = description;
