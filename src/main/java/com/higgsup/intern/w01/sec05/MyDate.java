@@ -1,6 +1,6 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise9
+public class MyDate
 {
     private int month; // 1-12
     private int day;   // 1-31 based on month
@@ -8,7 +8,7 @@ public class Exercise9
 
     // constructor: call checkMonth to confirm proper value for month;
     // call checkDay to confirm proper value for day
-    public Exercise9(int theMonth, int theDay, int theYear) {
+    public MyDate(int theMonth, int theDay, int theYear) {
         month = checkMonth(theMonth); // validate month
         year = checkYear(theYear); //  validate year
         day = checkDay(theDay); // validate day
@@ -80,7 +80,7 @@ public class Exercise9
 
     //Program test
     public static void main(String[] args) {
-        Exercise9 day = new Exercise9(11, 13, 1995);
+        MyDate day = new MyDate(11, 13, 1995);
         for(int i = 0; i < 66; i++){
             day.nextDay();
             System.out.println(day);
