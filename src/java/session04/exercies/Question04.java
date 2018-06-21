@@ -1,30 +1,22 @@
 package session04.exercies;
+
+import java.util.Arrays;
+
 /*
 *4.Write a code fragment that reverses the order of values in a one-dimensional string array.
  * Do not create another array to hold the result
 * */
 public class Question04 {
-    static void bubbleSort(int[] arr){
-        int temp = 0;
-        for(int i=0; i < arr.length; i++){
-            for(int j=1; j < (arr.length-i); j++){
-                if(arr[j-1] > arr[j]){
-                    temp = arr[j-1];
-                    arr[j-1] = arr[j];
-                    arr[j] = temp;
-                }
-
-            }
-        }
-    }
-
     public static void main(String[] args) {
-        int arr[] ={50,9,7,90,3,100,234,2,6,1};
-        bubbleSort(arr);
-        System.out.println("Array after Bubble Sort :");
-        for(int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
+        int[] a={1,5,8,10,30};
+        int n = a.length;
+        int temp;
+        for (int i = 0; i < n/2; i++) {
+             temp = a[n-i-1];
+            a[n-i-1] = a[i];
+            a[i] = temp;
         }
+            System.out.println(Arrays.toString(a));
     }
 
 }

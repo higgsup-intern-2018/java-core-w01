@@ -10,9 +10,9 @@ public class Question20 {
     {
         int number =6;
         int a = (int) ( (Math.random()*number));
-        System.out.println("Input number  a : "+a);
+        System.out.println("Output number  a : "+a);
         int b = (int) ( (Math.random()*number));
-        System.out.println("Input number  a : "+b);
+        System.out.println("Output number  a : "+b);
         int sum = a+b;
         System.out.println("Sum a + b : "+sum);
     }
