@@ -5,8 +5,8 @@ public class Quesions {
     *1. Suppose that a and b are int values. What does the following sequence of statements do?
     * int t = a;
     * b = t;
-    * a = b
-    * Đoạn code trên nói rằng t = a, t = b thì a = b
+    * a = b;
+    * Đoạn code trên nói rằng t = a, t = b ,a = b
     * */
 
     /*
