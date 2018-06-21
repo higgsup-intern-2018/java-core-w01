@@ -1,11 +1,11 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise7
+public class SavingsAccount
 {
     static double annualInterestRate;
     private double savingsBalance;
 
-    public Exercise7(double balance)
+    public SavingsAccount(double balance)
     {
         if(balance > 0){
             savingsBalance = balance;
