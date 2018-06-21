@@ -7,7 +7,7 @@ public class ReadFile {
     public static void main(String[] args) {
         try
         {
-            File file = new File("D:\\intern-training\\java-core-w01\\src\\java\\session05\\part01\\input.txt");
+            File file = new File("input.txt");
             Scanner sc = new Scanner(file);
             while (sc.hasNext())
             {
