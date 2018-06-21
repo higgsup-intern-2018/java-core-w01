@@ -21,13 +21,13 @@ public class SavingsAccount {
         this.savingsBalance = savingsBalance;
     }
 
-    public double calculateMonthlyInterest(){
-        double monthlyInterest = getSavingsBalance()*(annualInterestRate/12);
+    public double calculateMonthlyInterest() {
+        double monthlyInterest = getSavingsBalance() * (annualInterestRate / 12);
         this.savingsBalance = savingsBalance + monthlyInterest;
         return monthlyInterest;
     }
 
-    public static void modifyInterestRest(double newInterestRate){
+    public static void modifyInterestRest(double newInterestRate) {
         annualInterestRate = newInterestRate;
     }
 }
