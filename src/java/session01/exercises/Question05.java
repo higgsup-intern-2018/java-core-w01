@@ -7,9 +7,8 @@ public class Question05 {
 * "java UseThree Alice Bob Carol" gives "Hi Carol, Bob, and Alice.".
 * */
     public static void main(String[] args){
-    String[] arr ={"Carol","Bod","Alice"};
-        System.out.println("Hi "+arr[0]+", "+arr[1]+", "+arr[2]);
+        System.out.println("Hi "+args[0]+", "+args[1]+", "+args[2]);
         System.out.println("--------------------------------------");
-        System.out.println("Hi "+arr[2]+", "+arr[1]+", "+arr[0]);
+        System.out.println("Hi "+args[2]+", "+args[1]+", "+args[0]);
     }
 }
