@@ -49,6 +49,8 @@ public class Exercise3
         if(quantity > 0)
         {
             this.quantity = quantity;
+        }else{
+            this.quantity = 0;
         }
     }
 
@@ -62,6 +64,8 @@ public class Exercise3
         if(price > 0)
         {
             this.price = price;
+        }else{
+            this.price = 0;
         }
     }
 
