@@ -1,12 +1,12 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise4
+public class Employee
 {
     private String firstName;
     private String lastName;
     private double monthlySalary;
 
-    public Exercise4(String firstName, String lastName, double salary)
+    public Employee(String firstName, String lastName, double salary)
     {
         this.firstName = firstName;
         this.lastName = lastName;
