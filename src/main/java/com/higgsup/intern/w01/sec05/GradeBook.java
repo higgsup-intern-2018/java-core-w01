@@ -1,13 +1,13 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise1
+public class GradeBook
 {
     private String courseName; // course name for this GradeBook
     private String courseInstructor;    //course instructor
 
     // constructor initializes courseName with String supplied as argument
     // modified to specify two parameters for course name and instructor name
-    public Exercise1(String name, String instructor) {
+    public GradeBook(String name, String instructor) {
         courseName = name; // initializes courseName
         courseInstructor = instructor;  //initializes courseInstructor
     } // end constructor
@@ -43,7 +43,7 @@ public class Exercise1
 
     //Test application
     public static void main(String[] args) {
-        Exercise1 exDemo= new Exercise1("JAVA", "Kev");
+        GradeBook exDemo= new GradeBook("JAVA", "Kev");
         exDemo.displayMessage();
     }
 }
