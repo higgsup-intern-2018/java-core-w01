@@ -86,7 +86,7 @@ public class Time2
     } // end method toString
 
     public static void main(String[] args) {
-        Time2 time = new Time2(11, 18, 16);
+        Time2 time = new Time2(44, 46, 82);
         System.out.println(time);
     }
 }
