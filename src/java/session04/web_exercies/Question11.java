@@ -29,7 +29,7 @@ public class Question11 {
     public static void main(String[] args) {
         int w;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input w :");
+        System.out.println("Input weigth :");
         w = sc.nextInt();
         int[] weigths = {112, 115, 118, 122, 126, 130, 135, 140, 147,
                         154, 160, 167, 174, 183, 189, 198, 209, 9999};
