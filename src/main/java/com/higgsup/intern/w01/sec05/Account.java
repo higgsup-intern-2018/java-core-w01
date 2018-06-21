@@ -1,11 +1,11 @@
 package com.higgsup.intern.w01.sec05;
 
-public class Exercise2
+public class Account
 {
     private double balance; // instance variable that stores the balance
 
     // constructor
-    public Exercise2(double initialBalance) {
+    public Account(double initialBalance) {
         // validate that initialBalance is greater than 0.0;
         // if it is not, balance is initialized to the default value 0.0
         if (initialBalance > 0.0) {
@@ -34,4 +34,5 @@ public class Exercise2
     public double getBalance() {
         return balance; // gives the value of balance to the calling method
     } // end method getBalance
+
 }

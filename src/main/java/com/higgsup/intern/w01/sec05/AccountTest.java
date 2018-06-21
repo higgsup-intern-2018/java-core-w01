@@ -1,11 +1,11 @@
 package com.higgsup.intern.w01.sec05;
 import java.util.Scanner;
 
-public class Exercise2Test
+public class AccountTest
 {
     public static void main(String args[]) {
-        Exercise2 account1 = new Exercise2(50.00); // create Account object
-        Exercise2 account2 = new Exercise2(-7.53); // create Account object
+        Account account1 = new Account(50.00); // create Account object
+        Account account2 = new Account(-7.53); // create Account object
 
         // display initial balance of each object
         System.out.printf("account1 balance:$%.2f\n", account1.getBalance());
