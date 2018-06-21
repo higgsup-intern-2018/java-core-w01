@@ -20,7 +20,7 @@ public class Account {
 
     //debit the account
     public void debit(double amount){
-        if (amount >= getBalance()){
+        if (amount > getBalance()){
             System.out.println("Debit amount exceeded account balance.");
         } else System.out.println("Withdraw money successful!");
     }
