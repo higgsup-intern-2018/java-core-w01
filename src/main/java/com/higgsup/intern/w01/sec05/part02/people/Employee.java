@@ -1,4 +1,4 @@
-package com.higgsup.intern.w01.sec05.part02.person;
+package com.higgsup.intern.w01.sec05.part02.people;
 
 import java.util.Date;
 
