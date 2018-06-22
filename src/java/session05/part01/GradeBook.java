@@ -7,7 +7,6 @@ public class GradeBook {
         couresName=name;
         lecturerName=nameLecturer;
     }
-
     public void setCouresName(String name){
         couresName=name;
     }
