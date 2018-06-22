@@ -84,27 +84,28 @@ public class Time2 {
                 getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
     } // end method toString
 
-    public void tick(){
+    public void tick() {
         if (second < 59) {
-            second ++;
-        }else {
+            second++;
+        } else {
             incrementMinute();
             second = 0;
         }
-
     }
-    public void incrementMinute(){
-        if (minute < 59){
-            minute ++;
-        }else {
+
+    public void incrementMinute() {
+        if (minute < 59) {
+            minute++;
+        } else {
             incrementHour();
             minute = 0;
         }
 
     }
-    public void  incrementHour (){
-        if (hour < 24){
-            hour ++;
-        }else hour = 0;
+
+    public void incrementHour() {
+        if (hour < 24) {
+            hour++;
+        } else hour = 0;
     }
 }
