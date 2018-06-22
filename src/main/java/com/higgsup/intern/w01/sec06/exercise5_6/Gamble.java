@@ -20,7 +20,7 @@ public class Gamble extends BankAccount
     }
 
     @Override
-    public double endMonthCharge() {
+    public int endMonthCharge() {
         return 0;
     }
 }

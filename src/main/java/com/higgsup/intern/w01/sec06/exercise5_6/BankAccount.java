@@ -52,8 +52,9 @@ public abstract class BankAccount
         System.out.println("Account data: " + "\nBalance: " + balance
                             + "\nTransaction count: " + transaction
                             + "\nFee: " + endMonthCharge());
+        withdraw(endMonthCharge());
         transaction = 0;
     }
 
-    public abstract double endMonthCharge();
+    public abstract int endMonthCharge();
 }

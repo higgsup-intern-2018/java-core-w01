@@ -2,7 +2,7 @@ package com.higgsup.intern.w01.sec06.exercise5_6;
 
 public class NickelNDime extends BankAccount
 {
-    static int withdraw;
+    private int withdrawCount;
 
     public NickelNDime(double balance)
     {
@@ -13,7 +13,7 @@ public class NickelNDime extends BankAccount
     public boolean withdraw(int amount) {
         if(super.withdraw(amount))
         {
-            withdraw++;
+            withdrawCount++;
             return true;
         }else{
             return false;
@@ -21,7 +21,7 @@ public class NickelNDime extends BankAccount
     }
 
     @Override
-    public double endMonthCharge() {
-        return 2000 * withdraw;
+    public int endMonthCharge() {
+        return 2000 * withdrawCount;
     }
 }
