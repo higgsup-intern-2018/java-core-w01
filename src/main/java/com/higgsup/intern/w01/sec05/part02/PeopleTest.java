@@ -2,6 +2,7 @@ package com.higgsup.intern.w01.sec05.part02;
 
 import com.higgsup.intern.w01.sec05.part02.model.Manager;
 import com.higgsup.intern.w01.sec05.part02.model.Employee;
+import com.higgsup.intern.w01.sec05.part02.model.Person;
 
 import java.util.Date;
 
@@ -16,5 +17,13 @@ public class PeopleTest {
         System.out.println(newbie);
         System.out.println(boss);
         System.out.println(biggerBoss);
+        System.out.println();
+
+        System.out.println("Exercise 03:");
+        Person[] personArray = new Person[]{newbie, boss, biggerBoss};
+        for (Object person : personArray){
+            System.out.println(person);
+        }
+
     }
 }
