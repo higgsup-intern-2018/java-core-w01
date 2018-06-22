@@ -1,27 +1,27 @@
-package session05.part01;
+package session05.part01.exercies06;
 
-public class Time2_06 {
+public class Time2 {
     private int hour;
     private int minute;
     private int second;
 
-    public Time2_06() {
+    public Time2() {
         this(0, 0, 0);
     }
 
-    public Time2_06(int h) {
+    public Time2(int h) {
         this(h, 0, 0);
     }
 
-    public Time2_06(int h, int m) {
+    public Time2(int h, int m) {
         this(h, m, 0);
     }
 
-    public Time2_06(int h, int m, int s) {
+    public Time2(int h, int m, int s) {
         setTime(h, m, s);
     }
 
-    public Time2_06(Time2_06 time) {
+    public Time2(Time2 time) {
 
         this(time.getHour(), time.getMinute(), time.getSecond());
     }
