@@ -49,7 +49,7 @@ public abstract class BankAccount
 
     public void endMonth()
     {
-        System.out.println("Account data: " + "\nBalance: " + balance
+        System.out.println("Account data: " + "\nBalance before paying fee: " + balance
                             + "\nTransaction count: " + transaction
                             + "\nFee: " + endMonthCharge());
         withdraw(endMonthCharge());

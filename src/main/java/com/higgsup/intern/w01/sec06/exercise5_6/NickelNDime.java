@@ -21,6 +21,12 @@ public class NickelNDime extends BankAccount
     }
 
     @Override
+    public void endMonth() {
+        super.endMonth();
+        withdrawCount = 0;
+    }
+
+    @Override
     public int endMonthCharge() {
         return 2000 * withdrawCount;
     }

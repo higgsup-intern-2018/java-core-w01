@@ -3,11 +3,31 @@ package com.higgsup.intern.w01.sec06.exercise5_6;
 public class DemoClient
 {
     public static void main(String[] args) {
-        BankAccount flatFee = new FlatFee(10000);
-        BankAccount nickel = new NickelNDime(9000);
-        BankAccount gamble = new Gamble(11000);
-        flatFee.deposit(100);
-        flatFee.deposit(200);
+        BankAccount flatFee = new FlatFee(100000);
+        BankAccount nickel = new NickelNDime(90000);
+        BankAccount gamble = new Gamble(110000);
+        flatFee.deposit(18000);
+        flatFee.deposit(2000);
+        nickel.withdraw(2000);
+        gamble.withdraw(1000);
+
+        flatFee.endMonth();
+        System.out.println();
+        nickel.endMonth();
+        System.out.println();
+        gamble.endMonth();
+        System.out.println();
+
+        flatFee.endMonth();
+        System.out.println();
+        nickel.endMonth();
+        System.out.println();
+        gamble.endMonth();
+        System.out.println();
+
+        flatFee.deposit(18000);
+        flatFee.deposit(2000);
+        nickel.withdraw(2000);
         gamble.withdraw(1000);
 
         MyComparator comparator = new BalanceAscending();
@@ -17,11 +37,15 @@ public class DemoClient
 
         //Balance ascending
         BankAccount[] accounts = new BankAccount[]{flatFee, nickel, gamble};
+        System.out.print("Initial balance value order: ");
         for(BankAccount ba: accounts)
         {
             System.out.print(ba.getBalance() + " ");
         }
+        System.out.println();
         sortAccount.sort(accounts, comparator);
+
+        System.out.print("Balance value in ascending order: ");
         for(BankAccount ba: accounts)
         {
             System.out.print(ba.getBalance() + " ");
@@ -30,6 +54,7 @@ public class DemoClient
 
         //Balance descending
         sortAccount.sort(accounts, anotherComparator);
+        System.out.print("Balance value in descending order: ");
         for(BankAccount ba: accounts)
         {
             System.out.print(ba.getBalance() + " ");
@@ -38,6 +63,7 @@ public class DemoClient
 
         //Transaction count descending
         sortAccount.sort(accounts, lastComparator);
+        System.out.print("Transaction count in descending order: ");
         for(BankAccount ba: accounts)
         {
             System.out.print(ba.getTransaction() + " ");
