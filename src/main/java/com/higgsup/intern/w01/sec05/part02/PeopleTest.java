@@ -1,8 +1,7 @@
 package com.higgsup.intern.w01.sec05.part02;
 
-import com.higgsup.intern.w01.sec05.part02.model.Manager;
-import com.higgsup.intern.w01.sec05.part02.model.Employee;
-import com.higgsup.intern.w01.sec05.part02.model.Person;
+import com.higgsup.intern.w01.sec05.part02.people.Employee;
+import com.higgsup.intern.w01.sec05.part02.people.Person;
 
 import java.util.Date;
 
