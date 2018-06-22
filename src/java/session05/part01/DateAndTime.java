@@ -86,7 +86,7 @@ public class DateAndTime {
     {
         second++;
         if(getSecond() == 60) {
-            setSecond(second);
+           setSecond(second);
             incrementMinute();
         }
     }
