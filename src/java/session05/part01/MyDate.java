@@ -21,7 +21,7 @@ public class MyDate {
         }
         else
         {
-            //System.out.printf("Invalid month (%d) set to 1.", testMonth);
+            System.out.printf("Invalid month (%d) set to 1.", testMonth);
             return 1;
         }
     }
