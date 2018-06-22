@@ -1,6 +1,7 @@
-package com.higgsup.intern.w01.sec06.exercise1_2_3;
+package com.higgsup.intern.w01.sec06.exercise1_2_3_4;
 
 import java.util.Date;
+import com.higgsup.intern.w01.sec06.exercise1_2_3_4.people.Employee;
 
 public class Manager extends Employee
 {
