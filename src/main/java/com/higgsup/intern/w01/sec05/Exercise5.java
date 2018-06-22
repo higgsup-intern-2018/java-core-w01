@@ -13,7 +13,7 @@ public class Exercise5
             while(input.hasNextLine())
             {
                 String s = input.next();
-                System.out.print(s + " ");
+                System.out.println(s);
             }
         } catch (java.io.FileNotFoundException e) {}
     }
