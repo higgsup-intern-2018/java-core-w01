@@ -52,12 +52,13 @@ public class MyDate {
         {
             day=checkDay(day);
             month++;
+            if (month == 13)
+            {
+                month=checkMonth(month);
+                year++;
+            }
         }
-        if (month == 13)
-        {
-            month=checkMonth(month);
-            year++;
-        }
+
     }
 
 }
