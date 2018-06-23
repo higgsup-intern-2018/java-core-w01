@@ -2,7 +2,7 @@ package com.higgsup.intern.w01.sec05.part02.accounts;
 
 public abstract class BankAccount {
     private double balance;
-    private int transaction;
+    private int transactionCount;
 
     public BankAccount(double balance) {
         this.balance = balance;
@@ -16,17 +16,17 @@ public abstract class BankAccount {
         this.balance = balance;
     }
 
-    public int getTransaction() {
-        return transaction;
+    public int getTransactionCount() {
+        return transactionCount;
     }
 
-    public void setTransaction(int transaction) {
-        this.transaction = transaction;
+    public void setTransactionCount(int transactionCount) {
+        this.transactionCount = transactionCount;
     }
 
     boolean deposit(double deposits){
         balance = balance + deposits;
-        transaction++;
+        transactionCount++;
         return true;
     }
     boolean withdraw(double withdrawalMoney){
@@ -40,8 +40,12 @@ public abstract class BankAccount {
         double charge = endMonthCharge();
         balance = balance - charge;
         System.out.println("Information of charging monthly fee:");
-        System.out.println("Balance: " + balance + ", Transaction: " + transaction + ", Fee: " + charge);
-        transaction = 0;
+        System.out.println("Balance: " + balance + ", Transaction: " + transactionCount + ", Fee: " + charge);
+        transactionCount = 0;
     }
     abstract double endMonthCharge();
+
+    public String toString() {
+        return String.format("(%f, %d)", balance, transactionCount);
+    }
 }
