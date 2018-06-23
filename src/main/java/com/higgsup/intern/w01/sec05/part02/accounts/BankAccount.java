@@ -24,7 +24,7 @@ public abstract class BankAccount {
         this.transaction = transaction;
     }
 
-    boolean deposit(int deposits){
+    boolean deposit(double deposits){
         balance = balance + deposits;
         transaction++;
         return true;
@@ -37,8 +37,10 @@ public abstract class BankAccount {
 
     }
     void endMonth(){
+        double charge = endMonthCharge();
+        balance = balance - charge;
         System.out.println("Information of charging monthly fee:");
-        System.out.println("Balance: " + balance + ", Transaction: " + transaction + ", Fee: " + endMonthCharge());
+        System.out.println("Balance: " + balance + ", Transaction: " + transaction + ", Fee: " + charge);
         transaction = 0;
     }
     abstract double endMonthCharge();
