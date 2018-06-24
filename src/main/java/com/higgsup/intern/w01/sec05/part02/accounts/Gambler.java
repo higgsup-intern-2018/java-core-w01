@@ -3,12 +3,10 @@ package com.higgsup.intern.w01.sec05.part02.accounts;
 import java.util.Random;
 
 public class Gambler extends BankAccount {
-    private double balance;
     private double withdrawalMoney;
 
     public Gambler(double balance) {
         super(balance);
-        this.balance = balance;
     }
 
     @Override
@@ -19,3 +17,4 @@ public class Gambler extends BankAccount {
     }
 }
 
+//NOTE: UNCOMPLETE!!!!
