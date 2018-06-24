@@ -9,8 +9,8 @@ public class MyListDemo
     {
         List myList = new ArrayList();
         MyList list = new MyList(myList);
-        List<String> copied = new ArrayList<>();
-        List<String> clone = new ArrayList<>();
+        List copied = new ArrayList<>();
+        List clone = new ArrayList<>();
         MyList anotherList = new MyList(copied);
 
         //Add and print out collection

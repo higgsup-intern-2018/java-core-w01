@@ -1,16 +1,14 @@
 package com.higgsup.intern.w01.sec07.ex02;
 
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class MyList implements Cloneable
+public class MyList
 {
-    private List<String> myList;
+    private List myList;
 
-    public MyList(List<String> list)
+    public MyList(List list)
     {
         myList = list;
     }
@@ -59,9 +57,9 @@ public class MyList implements Cloneable
 
     public boolean searchElement(String color)
     {
-        for(String c: myList)
+        for(Object c: myList)
         {
-            if(c.equalsIgnoreCase(color))
+            if(c.toString().equalsIgnoreCase(color))
             {
                 return true;
             }
@@ -74,9 +72,9 @@ public class MyList implements Cloneable
         Collections.sort(myList);
     }
 
-    public void copy(List<String> list)
+    public void copy(List list)
     {
-        for(String c : myList)
+        for(Object c : myList)
         {
             list.add(c);
         }
@@ -92,22 +90,20 @@ public class MyList implements Cloneable
         Collections.reverse(myList);
     }
 
-    public boolean compare(List<String> list)
+    public boolean compare(List list)
     {
         return myList.equals(list);
     }
 
-    public void join(List<String> list)
+    public void join(List list)
     {
         myList.addAll(list);
     }
 
-    public void clone(List<String> clone)
+    public void clone(List clone)
     {
-       for(String s : myList)
-       {
-           clone.add(s);
-       }
+       for(Object o : myList)
+           clone.add(o);
     }
 
     public void emptyList()
