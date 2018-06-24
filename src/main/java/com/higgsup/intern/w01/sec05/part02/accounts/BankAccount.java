@@ -12,16 +12,8 @@ public abstract class BankAccount {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
     public int getTransactionCount() {
         return transactionCount;
-    }
-
-    public void setTransactionCount(int transactionCount) {
-        this.transactionCount = transactionCount;
     }
 
     boolean deposit(double deposits){
@@ -30,15 +22,16 @@ public abstract class BankAccount {
         return true;
     }
     boolean withdraw(double withdrawalMoney){
-        if (withdrawalMoney < balance){
-            balance = balance - withdrawalMoney;
+        transactionCount++;
+        if (withdrawalMoney <= balance){
+            balance -= withdrawalMoney;
             return true;
         }else return false;
 
     }
     void endMonth(){
         double charge = endMonthCharge();
-        balance = balance - charge;
+        balance -= charge;
         System.out.println("Information of charging monthly fee:");
         System.out.println("Balance: " + balance + ", Transaction: " + transactionCount + ", Fee: " + charge);
         transactionCount = 0;
@@ -46,6 +39,6 @@ public abstract class BankAccount {
     abstract double endMonthCharge();
 
     public String toString() {
-        return String.format("(%f, %d)", balance, transactionCount);
+        return String.format("($%1.2f, %d)", getBalance(), getTransactionCount());
     }
 }
