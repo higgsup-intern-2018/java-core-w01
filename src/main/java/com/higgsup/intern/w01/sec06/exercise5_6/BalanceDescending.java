@@ -4,12 +4,6 @@ public class BalanceDescending implements MyComparator
 {
     @Override
     public boolean less(BankAccount a1, BankAccount a2) {
-        if(a1.getBalance() > a2.getBalance())
-        {
-            return true;
-        }
-        else {
-                return false;
-        }
+       return a1.getBalance() > a2.getBalance();
     }
 }
