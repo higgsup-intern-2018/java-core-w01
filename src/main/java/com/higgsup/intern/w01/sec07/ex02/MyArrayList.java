@@ -16,6 +16,9 @@ public class MyArrayList {
     /**
      * 1. Write a Java program to create a new array list, add some colors (string) and print out the collection.
      */
+    void addElement(String str){
+        myList.add(str);
+    }
     void print() {
         System.out.println(myList.toString());
     }
@@ -47,8 +50,9 @@ public class MyArrayList {
     /**
      * 5. Update specific array element by given element.
      */
-    void update(String element) {
-        myList.add(element);
+    void update(int position, String element)
+    {
+        myList.set(position, element);
     }
 
     /**
@@ -75,8 +79,10 @@ public class MyArrayList {
     /**
      * 9. Copy one array list into another.
      */
-    void copy(ArrayList newArrayList) {
-        newArrayList = (ArrayList) newArrayList.clone();
+    void copy(ArrayList newArrayList)
+    {
+        for (Object arr : myList)
+        newArrayList.add(arr);
     }
 
     /**
@@ -113,7 +119,9 @@ public class MyArrayList {
 
     /** 14. clone an array list to another array list.
      */
-
+    void cloneArrayList(ArrayList arrayList){
+        myList = new ArrayList(arrayList);
+    }
     /**
      * 15. empty an array list and check list is empty or not
      */
