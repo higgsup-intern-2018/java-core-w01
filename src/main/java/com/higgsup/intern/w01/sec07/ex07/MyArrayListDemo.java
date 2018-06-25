@@ -26,7 +26,7 @@ public class MyArrayListDemo
         arrayList.print();
 
         //index check
-        System.out.println(arrayList.indexCheck(3));
+        System.out.println("Check index 3: " + arrayList.indexCheck(3));
 
         //get index
         System.out.println("Get element at index 2: " + arrayList.get(2));
@@ -50,20 +50,23 @@ public class MyArrayListDemo
         System.out.println(arrayList.indexOf("Belo"));
 
         //toArray
+        System.out.print("To array: [");
         for(String s: arrayList.toArray())
         {
             System.out.print(s + " ");
         }
+        System.out.println("]");
 
         //Sublist
         List s = arrayList.subList(0, 2);
-        System.out.println(s);
+        System.out.println("To sublist: " + s);
 
         //clear element
         arrayList.clear();
+        System.out.print("After clear: ");
         arrayList.print();
 
         //is empty
-        System.out.println(arrayList.isEmpty());
+        System.out.println("Is empty? " + arrayList.isEmpty());
     }
 }
