@@ -19,7 +19,7 @@ public abstract class BinaryExpression extends Expression{
 
     @Override
     public String toString() {
-        return "Value: " + evaluate();
+        return "" + evaluate();
     }
 
 

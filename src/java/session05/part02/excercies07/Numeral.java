@@ -10,7 +10,7 @@ public class Numeral extends Expression {
 
     @Override
     public String toString() {
-        return "Value : "+value;
+        return ""+value;
     }
 
     @Override

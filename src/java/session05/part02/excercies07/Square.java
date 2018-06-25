@@ -9,7 +9,7 @@ public class Square extends Expression {
 
     @Override
     public String toString() {
-        return "Value : "+evaluate();
+        return " "+evaluate();
     }
 
     @Override
