@@ -10,9 +10,9 @@ public class MyArrayListTest {
         MyArrayList myArrayList = new MyArrayList(colors);
 
         //1. add some colors
-        colors.add("white");
-        colors.add("black");
-        colors.add("red");
+        myArrayList.addElement("white");
+        myArrayList.addElement("black");
+        myArrayList.addElement("blue");
 
         //1. print collection
         myArrayList.print();
@@ -28,7 +28,7 @@ public class MyArrayListTest {
         myArrayList.retrieve(0);
 
         //5. update specific array element by given element.
-        myArrayList.update("blue");
+        myArrayList.update(1,"yellow");
         myArrayList.print();
 
         //6. remove the third element from a array list.
@@ -45,10 +45,9 @@ public class MyArrayListTest {
 
         //9. copy one array list into another.
         ArrayList listOfColors = new ArrayList();
-        MyArrayList myArrayList1 = new MyArrayList(listOfColors);
         System.out.println("After copying colors to listOfColors: ");
-        myArrayList1.copy(listOfColors);
-        myArrayList1.print();
+        myArrayList.copy(listOfColors);
+        myArrayList.print();
 
         //10. shuffle elements in a array list.
         System.out.println("After shuffling elements:");
@@ -66,12 +65,19 @@ public class MyArrayListTest {
         otherListOfColors.add("green");
 
         MyArrayList myArrayList2 = new MyArrayList(otherListOfColors);
-        myArrayList1.compare(myArrayList2);
+        myArrayList.compare(myArrayList2);
 
         //13. join two array lists.
         System.out.println("After joining colors and otherListOfColors: ");
         myArrayList.join((ArrayList) colors, otherListOfColors);
         myArrayList.print();
+
+        //14. clone an array list to another array list.
+        System.out.println("After clone colors to new array list: ");
+        List list = new ArrayList();
+        MyArrayList myArrayList13 = new MyArrayList(list);
+        myArrayList.cloneArrayList((ArrayList) list);
+        myArrayList13.print();
 
         //15. Empty an array list and check list is empty or not
         System.out.println("Empty an array list");
