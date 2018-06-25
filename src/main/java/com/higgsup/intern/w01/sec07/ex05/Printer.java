@@ -1,5 +1,6 @@
 package com.higgsup.intern.w01.sec07.ex05;
 
+//Not using generics
 public class Printer
 {
     public void printInt(int[] arr)
