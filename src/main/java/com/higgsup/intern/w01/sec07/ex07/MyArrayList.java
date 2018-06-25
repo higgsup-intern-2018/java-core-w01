@@ -10,19 +10,22 @@ public class MyArrayList
     private String[] strings;
     private static final int CAPACITY = 10;
 
+    //no-args constructor
     public MyArrayList()
     {
-        strings = new String[CAPACITY];
+        capacity = CAPACITY;
+        strings = new String[capacity];
     }
 
 
+    //constructor with array length
     public MyArrayList(int capacity)
     {
         this.capacity = capacity;
         strings = new String[capacity];
     }
 
-
+    //check index
     public boolean indexCheck(int index) throws IndexOutOfBoundsException
     {
         if(index > size || index < 0)
@@ -34,6 +37,7 @@ public class MyArrayList
         }
     }
 
+    //get index
     public String get(int index)
     {
         if(indexCheck(index))
@@ -44,16 +48,24 @@ public class MyArrayList
         }
     }
 
+    //add elements to list
     public void add(String element)
     {
         size += 1;
         if(size == capacity)
         {
             capacity *= 1.5;
+            String[] newArray = new String[capacity];
+            for(int i = 0; i < size; i++)
+            {
+                newArray[i] = strings[i];
+            }
+            strings = newArray;
         }
         strings[size-1] = element;
     }
 
+    //add element at index
     public void add(int index, String element)
     {
         if(indexCheck(index))
@@ -62,6 +74,12 @@ public class MyArrayList
             if(size == capacity)
             {
                 capacity *= 1.5;
+                String[] newArray = new String[capacity];
+                for(int i = 0; i < size; i++)
+                {
+                    newArray[i] = strings[i];
+                }
+                strings = newArray;
             }
             for(int i = size - 1; i > index; i--)
             {
@@ -73,6 +91,7 @@ public class MyArrayList
         }
     }
 
+    //update element at index
     public void set(int index, String element)
     {
         if(indexCheck(index))
@@ -83,50 +102,46 @@ public class MyArrayList
         }
     }
 
+    //remove element
     public void remove(String element)
     {
-        for(int i = 0; i < strings.length; i++)
+        for(int i = 0; i < size; i++)
         {
             if(strings[i].equalsIgnoreCase(element))
             {
-                for(int j = i; j < strings.length-2; j++)
-                {
-                    strings[j] = strings[j+1];
-                }
+                remove(i);
             }
         }
-        strings[strings.length - 1] = null;
     }
 
+    //remove at index
     public void remove(int index)
     {
-        if(indexCheck(index)) {
-            for (int i = 0; i < strings.length; i++) {
-                if (i == index) {
-                    for (int j = i; j < strings.length; j++) {
-                        strings[j] = strings[j + 1];
-                    }
-                }
-            }
-            strings[strings.length - 1] = null;
-        }else{
-            System.out.println("Index not found");
+        size -= 1;
+        for(int i = index; i < size; i++)
+        {
+            strings[i] = strings[i+1];
         }
     }
 
+    //clear
     public void clear()
     {
-
+        String[] arr = new String[capacity];
+        strings = arr;
+        size = 0;
     }
 
+    //isEmpty
     public boolean isEmpty()
     {
        return size == 0;
     }
 
+    //contains element
     public boolean contains(String element)
     {
-        for(int i = 0; i < strings.length; i++) {
+        for(int i = 0; i < size; i++) {
             if (strings[i].equalsIgnoreCase(element)) {
                 return true;
             }
@@ -134,9 +149,10 @@ public class MyArrayList
         return false;
     }
 
+    //index of element
     public int indexOf(String element)
     {
-        for(int i = 0; i < strings.length; i++) {
+        for(int i = 0; i < size; i++) {
             if (strings[i].equalsIgnoreCase(element)) {
                 return i;
             }
@@ -144,6 +160,7 @@ public class MyArrayList
         return -1;
     }
 
+    //to array
     public String[] toArray()
     {
         String[] s = new String[size];
@@ -154,6 +171,7 @@ public class MyArrayList
         return s;
     }
 
+    //sublist
     public List subList(int fromIndex, int toIndex)
     {
         List list = new ArrayList();
@@ -167,17 +185,22 @@ public class MyArrayList
         return list;
     }
 
-    public int size(){
-        return size;
-    }
 
     public void print()
     {
-        System.out.print("[");
-        for(int i = 0; i < size - 1; i++)
-        {
-            System.out.print(strings[i] + " ");
-        }
-        System.out.println(strings[size - 1] + "]");
+        if(size > 0) {
+            System.out.print("[");
+            for (int i = 0; i < size - 1; i++) {
+                System.out.print(strings[i] + " ");
+            }
+            System.out.println(strings[size - 1] + "]");
+        }else
+            {
+                System.out.println("[]");
+            }
+    }
+
+    public int size(){
+        return size;
     }
 }

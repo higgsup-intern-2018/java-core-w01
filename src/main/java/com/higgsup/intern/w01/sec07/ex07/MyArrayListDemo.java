@@ -6,15 +6,23 @@ public class MyArrayListDemo
 {
     public static void main(String[] args) {
         MyArrayList arrayList = new MyArrayList();
+        String[] toArray;
 
         //add element
         arrayList.add("Lucas");
         arrayList.add("Hwin");
-
-        //add at index
-        arrayList.add(1, "Tenz");
+        arrayList.add("Tenz");
+        arrayList.add("Ropz");
+        arrayList.add("Sunny");
+        arrayList.add("Stewie");
+        arrayList.add("cold");
+        arrayList.add("Fallen");
+        arrayList.add("nathE");
         arrayList.add("food");
+        arrayList.print();
 
+        //add element at index
+        arrayList.add(4, "Stew");
         arrayList.print();
 
         //index check
@@ -28,16 +36,34 @@ public class MyArrayListDemo
         arrayList.print();
 
         //remove element
+        arrayList.remove("cold");
+        arrayList.print();
+
+        //remove index
+        arrayList.remove(5);
         arrayList.print();
 
         //contains element
         System.out.println(arrayList.contains("Tenz"));
 
         //index of element
-        System.out.println(arrayList.indexOf("Tenz"));
+        System.out.println(arrayList.indexOf("Belo"));
+
+        //toArray
+        for(String s: arrayList.toArray())
+        {
+            System.out.print(s + " ");
+        }
 
         //Sublist
         List s = arrayList.subList(0, 2);
         System.out.println(s);
+
+        //clear element
+        arrayList.clear();
+        arrayList.print();
+
+        //is empty
+        System.out.println(arrayList.isEmpty());
     }
 }
