@@ -83,6 +83,20 @@ public class MyList
         }
     }
 
+    //another remove range
+    public void removeRange2(int from, int to)
+    {
+        List<Integer> remove = new ArrayList<>();
+        for(int x: numbers)
+        {
+            if(from <= x && x <= to)
+            {
+                remove.add(x);
+            }
+        }
+        this.numbers.removeAll(remove);
+    }
+
     //fill range
     public void fillRange(int from, int to)
     {

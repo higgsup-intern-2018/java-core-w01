@@ -9,7 +9,7 @@ public class MyListDemo
     {
         MyList myList = new MyList();
         List<Integer> numbers = new ArrayList<>();
-        int[] nums = new int[]{1, 2, 9, 33, 14};
+        int[] nums = new int[]{1, 2, 9, 33, 18};
         numbers.add(3);
         numbers.add(8);
         numbers.add(5);
@@ -44,6 +44,11 @@ public class MyListDemo
         System.out.print("List after add array: ");
         myList.print();
 
+        //sort list
+        myList.sort();
+        System.out.print("List after sort: ");
+        myList.print2();
+
         //remove index
         myList.removeIndex(3);
         System.out.print("List after remove number at index: ");
@@ -54,21 +59,20 @@ public class MyListDemo
 
         //remove element
         myList.removeElements(14);
-        System.out.print("List after remove number at index: ");
+        System.out.print("List after remove number elements: ");
         myList.print3();
 
         //remove range
         myList.removeRange(2, 9);
         System.out.print("List after remove numbers in range: ");
-        myList.print();
-
-        //sort list
-        myList.sort();
-        System.out.print("List after sort: ");
         myList.print2();
 
-        //fill range
+        //another remove range
+        myList.removeRange2(10, 17);
+        System.out.print("List after another remove numbers in range: ");
+        myList.print();
 
+        //fill range
 
         //reverse list
         myList.reverse();
