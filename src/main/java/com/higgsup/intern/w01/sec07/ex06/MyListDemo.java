@@ -9,7 +9,7 @@ public class MyListDemo
     {
         MyList myList = new MyList();
         List<Integer> numbers = new ArrayList<>();
-        int[] nums = new int[]{4, 2, 9, 33, 14};
+        int[] nums = new int[]{1, 2, 9, 33, 14};
         numbers.add(3);
         numbers.add(8);
         numbers.add(5);
@@ -18,39 +18,66 @@ public class MyListDemo
 
         //set data with list
         myList.setData(numbers);
+        System.out.print("Set data with list: ");
         myList.print();
-        System.out.println();
+
+        //set data with array
+        //myList.setData(nums);
+
 
         //add number
         myList.add(14);
         myList.add(4);
-        myList.print();
-        System.out.println();
+        System.out.print("List after add new numbers: ");
+        myList.print3();
 
         //add number at index
-        myList.add(4, 33);
+        myList.add(4, 25);
         myList.add(2, 16);
+        System.out.print("If add at index out of bound: ");
+        myList.add(14, 12);
+        System.out.print("List after add new numbers at index: ");
         myList.print();
-        System.out.println();
+
+        //add list
+        myList.add(nums);
+        System.out.print("List after add array: ");
+        myList.print();
 
         //remove index
         myList.removeIndex(3);
-        myList.print();
-        System.out.println();
+        System.out.print("List after remove number at index: ");
+        myList.print2();
+
+        System.out.print("If remove at index out of bound: ");
+        myList.removeIndex(14);
 
         //remove element
         myList.removeElements(14);
-        myList.print();
-        System.out.println();
+        System.out.print("List after remove number at index: ");
+        myList.print3();
 
         //remove range
         myList.removeRange(2, 9);
+        System.out.print("List after remove numbers in range: ");
         myList.print();
-        System.out.println();
+
+        //sort list
+        myList.sort();
+        System.out.print("List after sort: ");
+        myList.print2();
+
         //fill range
+
 
         //reverse list
         myList.reverse();
+        System.out.print("List after reverse: ");
         myList.print();
+
+        //another reverse list
+        myList.reverse2();
+        System.out.print("List after another reverse: ");
+        myList.print2();
     }
 }
