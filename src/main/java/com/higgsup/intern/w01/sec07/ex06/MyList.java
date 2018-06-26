@@ -53,6 +53,22 @@ public class MyList {
     void reverse(){
         Collections.reverse(numbers);
     }
+    void print1(){
+        for (int e : numbers){
+            System.out.println(e + " ");
+        }
+    }
+    void print2(){
+        Iterator <Integer> itr = numbers.iterator();
+        while (itr.hasNext()){
+            System.out.println(itr.next());
+        }
+    }
+    void print3(){
+        for (int i = 0; i < numbers.size(); i++){
+            System.out.println(numbers.get(i));
+        }
+    }
 
 
 
