@@ -70,7 +70,14 @@ public class MyList {
         }
     }
 
-
+/** Answers:
+ * 1. List<Integer> numbers và List<int> numbers có gì khác nhau?
+ * - Integer là kiểu wrapper có nghĩa nó chứa không chỉ kiểu primitive mà còn cả các phương thức trong đó
+ * - int chỉ là kiểu primitive thôi, ko sử dụng được các phương thức.
+ *
+ * 2. Tại sao List<Integer> ta vẫn có thể add được element kiểu int
+ * Bởi như câu 1: Integer chứa cả primitive và các phương thức.
+ */
 
 
 
