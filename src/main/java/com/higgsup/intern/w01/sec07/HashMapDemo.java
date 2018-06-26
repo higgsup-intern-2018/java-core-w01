@@ -37,16 +37,15 @@ public class HashMapDemo {
         hashMap.put(5,  "Orange");
         System.out.println("HashMap: "+hashMap);
 
-        // dem so key-value
+        //count the number of key-value (size) mappings in a map.
         System.out.println("Size of mapping: "+hashMap.size());
 
-        // copy tat ca cua mapping
+        // copy all of the mappings from the specified map to another map.
 
         copyMap.putAll(hashMap);
         System.out.println("Copy hashMap:"+copyMap);
 
-        // Remove tat ca cua Mappings
-
+        // remove all of the mappings from a map.
         copyMap.clear();
         System.out.println("Sau khi remove tat ca: "+copyMap);
 
@@ -54,6 +53,11 @@ public class HashMapDemo {
 
         System.out.println("Map co rong hay ko"+hashMap.isEmpty());
         System.out.println("HashMap copy co rong hay ko"+copyMap.isEmpty());
+
+        //Write a Java program to test if a map contains a mapping for the specified key.
+
+        System.out.println("Kiểm tra map có key là 3:"+hashMap.containsValue(3));
+        System.out.println("Kiểm tra map có key là 5:"+hashMap.containsValue(5));
 
         //test if a map contains a mapping for the specified value.
 
@@ -70,11 +74,10 @@ public class HashMapDemo {
         System.out.println("Gia tri cua key 1: "+hashMap.get(1));
 
         //get a set view of the keys contained in this map.
-        Set anotherSet = hashMap.keySet();
-        System.out.println(" Key trong map: "+anotherSet);
+        Set key_Set = hashMap.keySet();
+        System.out.println(" Key trong map: "+key_Set);
 
         // get a collection view of the values contained in this map
         System.out.println("Collection view of the value: "+hashMap.values());
-
     }
 }
