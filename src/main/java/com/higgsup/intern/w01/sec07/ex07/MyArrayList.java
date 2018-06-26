@@ -17,7 +17,6 @@ public class MyArrayList
         strings = new String[capacity];
     }
 
-
     //constructor with array length
     public MyArrayList(int capacity)
     {
@@ -52,16 +51,7 @@ public class MyArrayList
     public void add(String element)
     {
         size += 1;
-        if(size == capacity)
-        {
-            capacity *= 1.5;
-            String[] newArray = new String[capacity];
-            for(int i = 0; i < size; i++)
-            {
-                newArray[i] = strings[i];
-            }
-            strings = newArray;
-        }
+        checkAddCapacity();
         strings[size-1] = element;
     }
 
@@ -71,16 +61,7 @@ public class MyArrayList
         if(indexCheck(index))
         {
             size += 1;
-            if(size == capacity)
-            {
-                capacity *= 1.5;
-                String[] newArray = new String[capacity];
-                for(int i = 0; i < size; i++)
-                {
-                    newArray[i] = strings[i];
-                }
-                strings = newArray;
-            }
+            checkAddCapacity();
             for(int i = size - 1; i > index; i--)
             {
                 strings[i] = strings[i-1];
@@ -202,5 +183,24 @@ public class MyArrayList
 
     public int size(){
         return size;
+    }
+
+    public void checkAddCapacity()
+    {
+        if(size == capacity)
+        {
+            addCapacity();
+        }
+    }
+
+    public void addCapacity()
+    {
+        capacity *= 1.5;
+        String[] newArray = new String[capacity];
+        for(int i = 0; i < size; i++)
+        {
+            newArray[i] = strings[i];
+        }
+        strings = newArray;
     }
 }
