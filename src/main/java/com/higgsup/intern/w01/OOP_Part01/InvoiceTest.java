@@ -1,4 +1,4 @@
-package com.higgsup.intern.w01.OOP_Part01;
+package com.higgsup.intern.w01.oop_part01;
 
 import java.util.Scanner;
 
