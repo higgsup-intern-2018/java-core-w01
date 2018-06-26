@@ -26,16 +26,16 @@ B đúng
   G đúng
   H sai do biến kiểu int không có phương thức intValue()
 
-6.Chọn đáp án D 
+7.Chọn đáp án D 
 
-7. Chọn đáp án A, B, C, D, F : do ngoài TreeSet không cho phép chứa các phần tử có kiểu khác
+10. Chọn đáp án A, B, C, D, F : do ngoài TreeSet không cho phép chứa các phần tử có kiểu khác
  nhau, các Set còn lại đều có thể chứa các phần tử có kiểu khác nhau nên compile và runtime 
  không có lỗi
 
-8. A đúng do có phương thức hashCode nên phần tử 1 và 3 được equals cho là trùng nhau 
+11. A đúng do có phương thức hashCode nên phần tử 1 và 3 được equals cho là trùng nhau 
 B sai do có 2 phần tử trùng nhau 
 C sai 
 D đúng do không có phương thức hashCode nên equals không xác nhận được hai phần tử có bằng nhau không => có 3 phần tử
 E, F sai 
 
-9.Chọn đáp án G do : class Dog chưa viết lại phương thức Comparable nên khi chạy TreeSet với kiểu Dog sẽ báo lỗi tại runtime 
+15.Chọn đáp án G do : class Dog chưa viết lại phương thức Comparable nên khi chạy TreeSet với kiểu Dog sẽ báo lỗi tại runtime 
