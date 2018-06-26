@@ -42,16 +42,16 @@ public class MyHashSet
     //Iterate through all elements in a hash set
     public void iterate()
     {
-        Iterator<String> it = hashSet.iterator();
-        while(it.hasNext())
+        Iterator<String> iterator = hashSet.iterator();
+        while(iterator.hasNext())
         {
-            String s = it.next();
+            String s = iterator.next();
             System.out.print(s + " ");
         }
         System.out.println();
     }
 
-    //Get number of elements in hashSet
+    //Write a Java program to get the number of elements in a hash set.
     public int numberOfElements()
     {
         return hashSet.size();
@@ -63,19 +63,18 @@ public class MyHashSet
         hashSet.clear();
     }
 
-    //Check if hashSet is empty
+    //Java program to empty an hash set and check hash set is empty or not.
     public boolean checkEmpty()
     {
         return hashSet.isEmpty();
     }
 
-    //Clone a hash set
+    //Write a Java program to clone a hash set to another hash set.
     public void clone(Set clone)
     {
         for(Object o : hashSet)
             clone.add(o);
     }
-
 
     //Compare two hash set
     public boolean compare(Set s)
