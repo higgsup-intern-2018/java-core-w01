@@ -85,5 +85,6 @@ public class MyListDemo
         myList.reverse2();
         System.out.print("List after another reverse: ");
         myList.print2();
+
     }
 }
