@@ -7,6 +7,7 @@ public class PrinterTest {
         Integer[] integerArray = {1, 2, 3, 4, 5, 6 };
         String [] stringArray = {"Nike", "Adidas", "Reebok", "Lining", "Gucci", "Zara"};
 
+        // Answer: Method called "printArray" should be marked "static". So, we can call it from its class without initializing a Object.
         Printer.printArray(characterArray);
         System.out.println();
         Printer.printArray(integerArray);
