@@ -100,10 +100,34 @@ public class MyList
     //fill range
     public void fillRange(int from, int to)
     {
+        int start = 0;
+        int end = 0;
         for(int i = 0; i < numbers.size(); i++)
         {
-
+            if(numbers.get(i) >= from)
+            {
+                start = i;
+                break;
+            }
         }
+
+        for(int i = start; i < numbers.size(); i++)
+        {
+            if(numbers.get(i) > to)
+            {
+                end = i - 1;
+                break;
+            }
+        }
+        int value = numbers.get(start);
+        while (value < numbers.get(end)-1)
+        {
+            value++;
+            if(!numbers.contains(value)) {
+                numbers.add(value);
+            }
+        }
+        sort();
     }
 
     //reverse list

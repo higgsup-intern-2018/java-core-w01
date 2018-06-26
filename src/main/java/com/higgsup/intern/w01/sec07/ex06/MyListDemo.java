@@ -13,8 +13,8 @@ public class MyListDemo
         numbers.add(3);
         numbers.add(8);
         numbers.add(5);
-        numbers.add(10);
-        numbers.add(7);
+        numbers.add(12);
+        numbers.add(13);
 
         //set data with list
         myList.setData(numbers);
@@ -22,12 +22,11 @@ public class MyListDemo
         myList.print();
 
         //set data with array
-        //myList.setData(nums);
-
+        myList.setData(nums);
 
         //add number
-        myList.add(14);
-        myList.add(4);
+        myList.add(6);
+        myList.add(7);
         System.out.print("List after add new numbers: ");
         myList.print3();
 
@@ -73,6 +72,9 @@ public class MyListDemo
         myList.print();
 
         //fill range
+        myList.fillRange(17, 25);
+        System.out.print("List after fill range: ");
+        myList.print();
 
         //reverse list
         myList.reverse();
