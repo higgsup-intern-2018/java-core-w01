@@ -15,3 +15,7 @@ This repository is used for team members to commit their Java Core Exercises on 
 
 * HungNH
 * DungPX
+##Question Sec07 
+##Exercies01
+*Question 01 :
+
